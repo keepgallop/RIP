@@ -7,14 +7,6 @@ Created on Sun Mar 18 14:13:54 2018
 email: liuchi_email@foxmail.com
 blog: leoch.xyz
 """
-
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Mar 14 14:18:39 2018
-
-@author: Leoch
-"""
 import os
 import cv2
 import pickle
