@@ -1,6 +1,16 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
+Created on Sun Mar 18 14:13:54 2018
+
+@author: Leoch
+email: liuchi_email@foxmail.com
+blog: leoch.xyz
+"""
+
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
 Created on Wed Mar 14 14:18:39 2018
 
 @author: Leoch
@@ -41,7 +51,7 @@ def rip (filepath, outputpath,method, scale):
                     res = aremove(res,scale)
                 count += 1
                 print (str(count))
-                img_list.append(res)          
+                img_list.append((file, res))          
     #    print (img_list)       
     except AttributeError as e:
         print("Error: Your image folder includes non-image file. You must move it and try again")
@@ -133,20 +143,21 @@ def main():
     img_list, n = rip(filepath,outputpath,method,scale)
     print ("End preprocessing.\n")
     print ("Preprocessed image number is " + str(n) + "\n")
-    print ("Preprocessed image size is ",img_list[0].shape,"\n")
+    print ("Preprocessed image size is ",img_list[0][1].shape,"\n")
     print ("Do you want to show a image randomly? ")
     show = input('[y/n]:')
     if show in ['y','Y']:
         index = rd.randint(0,n-1)
 #        index = 3
         if method != 'g':
-            fig = plt.imshow(img_list[index][:,:,::-1])
+            fig = plt.imshow(img_list[index][1][:,:,::-1])
             plt.show()
         else:
-            fig = plt.imshow(img_list[index],cmap ='gray')
+            fig = plt.imshow(img_list[index][1],cmap ='gray')
             plt.show()
     else:
         print ("Bye :)")
 
 if __name__ == "__main__":
     main()
+
