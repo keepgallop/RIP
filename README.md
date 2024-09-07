@@ -1,6 +1,6 @@
 # RIP
 
-A automatic tool for Retinal Image Preprocessing.
+An automatic tool for Retinal Image Preprocessing.
 
 ## Introduction
 
